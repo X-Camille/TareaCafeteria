@@ -50,8 +50,6 @@ public class CafeteriaController {
         }
         return true;
     }
-
-
     public boolean comprobarSiCamposVacios(String[] datosCafes) {
         for (String cafe : datosCafes) {
             if (cafe == null || cafe.trim().isEmpty()) {

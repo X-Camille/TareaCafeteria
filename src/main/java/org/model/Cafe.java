@@ -32,5 +32,6 @@ public class Cafe {
 	public String toString(){
 		return getGramosCafe() + "/" + getMililitrosAgua() + "/" + getTamano() + "/" + getIngredientes();
 	}
+
 }
 

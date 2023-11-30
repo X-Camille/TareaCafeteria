@@ -158,4 +158,5 @@ public class GUIAgregarCafe extends JFrame {
         String ingredientes = campoIngredientes.getText();
         return new String[]{gramos, mililitros, tamano, ingredientes};
     }
+
 }

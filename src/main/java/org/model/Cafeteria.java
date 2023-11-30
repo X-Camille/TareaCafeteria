@@ -97,5 +97,4 @@ public class Cafeteria {
 	public String toString(){
 		return getNombre() + "/" + getDireccion() + "/" + getRedesSociales();
 	}
-
 }
