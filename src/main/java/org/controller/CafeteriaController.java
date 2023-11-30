@@ -19,8 +19,9 @@ public class CafeteriaController {
         if (valoresFloat.length == 2) {
             float gramos = valoresFloat[0];
             float mililitros = valoresFloat[1];
+            String tamano = datosCafe[2];
 
-            if (!comprobarSiCamposVacios(datosCafe) && camposValidos(gramos, mililitros, datosCafe)) {
+            if (!comprobarSiCamposVacios(datosCafe) && camposValidos(gramos, mililitros, tamano)) {
                 Cafe cafe = new Cafe(gramos, mililitros, datosCafe[2], datosCafe[3]);
                 return cafeteria.generarCafe(cafe);
             }
@@ -39,7 +40,7 @@ public class CafeteriaController {
         }
     }
 
-    public boolean camposValidos(float gramos, float mililitros, String[] datosCafe) {
+    public boolean camposValidos(float gramos, float mililitros, String tamano) {
         if (gramos <= 0 || gramos > 1000) {
             System.err.println("Error: Los gramos de café deben ser mayores a 0 y menores o iguales a 1000.");
             return false;
@@ -48,7 +49,7 @@ public class CafeteriaController {
             System.err.println("Error: Los mililitros de agua deben ser mayores a 0 y menores o iguales a 1000.");
             return false;
         }
-        return true;
+        return tamano.equalsIgnoreCase("mediano") || tamano.equalsIgnoreCase("grande") || tamano.equalsIgnoreCase("pequeño");
     }
     public boolean comprobarSiCamposVacios(String[] datosCafes) {
         for (String cafe : datosCafes) {
