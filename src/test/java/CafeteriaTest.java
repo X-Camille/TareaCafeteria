@@ -1,5 +1,3 @@
-
-
 import org.junit.jupiter.api.*;
 import org.model.Cafe;
 import org.model.Cafeteria;
